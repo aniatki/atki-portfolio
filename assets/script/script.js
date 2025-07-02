@@ -179,9 +179,9 @@ function setupScrollAnimations() {
     window.addEventListener('scroll', () => {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         } else {
-            navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
         }
     });
 }
@@ -267,7 +267,7 @@ style.textContent = `
     .ripple {
         position: absolute;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.7);
         transform: scale(0);
         animation: ripple-animation 0.6s linear;
         pointer-events: none;
