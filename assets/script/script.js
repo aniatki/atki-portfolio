@@ -1,4 +1,3 @@
-// Projects data
 const projects = [
     {
         id: 1,
@@ -16,30 +15,30 @@ const projects = [
         githubUrl: "https://github.com/aniatki/di-lucias-redesign",
         imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
     },
-    {
-        id: 3,
-        title: "AI Text to Video Generator",
-        description: "Add prompts and generate video using OpenAI's powerful API.",
-        technologies: ["Python", "OpenAI"],
-        githubUrl: "https://github.com/aniatki/openai-text-to-video",
-        imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
-    },
-    {
-        id: 4,
-        title: "Using HTMX",
-        description: "Sample application demonstrating the power of Golang with HTMX for modern web development.",
-        technologies: ["Golang", "HTMX"],
-        githubUrl: "https://github.com/aniatki/go_htmx",
-        imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
-    },
-    {
-        id: 5,
-        title: "MayRemember",
-        description: "Server-side code for a small e-commerce app selling epoxy objects by order.",
-        technologies: ["Node.js", "Express.js", "EJS"],
-        githubUrl: "https://github.com/aniatki/may-remember",
-        imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
-    },
+    // {
+    //     id: 3,
+    //     title: "AI Text to Video Generator",
+    //     description: "Add prompts and generate video using OpenAI's powerful API.",
+    //     technologies: ["Python", "OpenAI"],
+    //     githubUrl: "https://github.com/aniatki/openai-text-to-video",
+    //     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
+    // },
+    // {
+    //     id: 4,
+    //     title: "Using HTMX",
+    //     description: "Sample application demonstrating the power of Golang with HTMX for modern web development.",
+    //     technologies: ["Golang", "HTMX"],
+    //     githubUrl: "https://github.com/aniatki/go_htmx",
+    //     imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
+    // },
+    // {
+    //     id: 5,
+    //     title: "MayRemember",
+    //     description: "Server-side code for a small e-commerce app selling epoxy objects by order.",
+    //     technologies: ["Node.js", "Express.js", "EJS"],
+    //     githubUrl: "https://github.com/aniatki/may-remember",
+    //     imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
+    // },
     {
         id: 6,
         title: "Lash by Belle",
@@ -50,31 +49,25 @@ const projects = [
     }
 ];
 
-// DOM elements
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const contactForm = document.getElementById('contact-form');
 const successMessage = document.getElementById('success-message');
 const submitBtn = document.getElementById('submit-btn');
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     loadProjects();
     setupNavigation();
-    setupContactForm();
     setupScrollAnimations();
     setupIntersectionObserver();
 });
 
-// Navigation functionality
 function setupNavigation() {
-    // Mobile menu toggle
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
 
-    // Close menu when clicking on a link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -82,7 +75,6 @@ function setupNavigation() {
         });
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
             hamburger.classList.remove('active');
@@ -91,7 +83,6 @@ function setupNavigation() {
     });
 }
 
-// Smooth scrolling function
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -106,7 +97,6 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Load projects dynamically
 function loadProjects() {
     const projectsGrid = document.getElementById('projects-grid');
     
@@ -138,50 +128,6 @@ function loadProjects() {
     });
 }
 
-// Contact form functionality
-function setupContactForm() {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Clear previous errors
-        clearErrors();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message')
-        };
-        
-        // Validate form
-        if (!validateForm(data)) {
-            return;
-        }
-        
-        // Show loading state
-        showLoading();
-        
-        try {
-            // Simulate API call (replace with actual endpoint)
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            // Show success message
-            showSuccess();
-            
-            // Reset form
-            contactForm.reset();
-            
-        } catch (error) {
-            // Show error message
-            showError('Failed to send message. Please try again later.');
-        } finally {
-            hideLoading();
-        }
-    });
-}
-
-// Form validation
 function validateForm(data) {
     let isValid = true;
     
@@ -253,9 +199,7 @@ function resetForm() {
     contactForm.reset();
 }
 
-// Scroll animations
 function setupScrollAnimations() {
-    // Navbar background on scroll
     window.addEventListener('scroll', () => {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) {
@@ -266,7 +210,6 @@ function setupScrollAnimations() {
     });
 }
 
-// Intersection Observer for animations
 function setupIntersectionObserver() {
     const observerOptions = {
         threshold: 0.1,
@@ -281,7 +224,6 @@ function setupIntersectionObserver() {
         });
     }, observerOptions);
     
-    // Observe elements that need animations
     const elementsToObserve = [
         ...document.querySelectorAll('.section-header'),
         ...document.querySelectorAll('.project-card'),
@@ -296,7 +238,6 @@ function setupIntersectionObserver() {
     });
 }
 
-// Utility functions
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -309,7 +250,6 @@ function debounce(func, wait) {
     };
 }
 
-// Add smooth scrolling to all anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -320,7 +260,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add ripple effect to buttons
 document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('click', function(e) {
         const ripple = document.createElement('span');
@@ -342,7 +281,6 @@ document.querySelectorAll('.btn').forEach(button => {
     });
 });
 
-// Add ripple effect styles
 const style = document.createElement('style');
 style.textContent = `
     .btn {
