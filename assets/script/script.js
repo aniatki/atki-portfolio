@@ -5,7 +5,7 @@ const projects = [
         description: "A local tracking system for internal staff and its accounts at Dorset College.",
         technologies: ["Django", "PostgreSQL", "Bulma CSS"],
         githubUrl: "https://github.com/aniatki/dorset-bank-app",
-        imageUrl: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
+        imageUrl: "assets/media/images/dorset_2.png"
     },
     {
         id: 2,
@@ -13,39 +13,15 @@ const projects = [
         description: "Di Lucia's Clonshaugh is a site designed for the people of Clonshaugh to order food from their local chip shop. The site's easy to use interface will assure for a joyful experience of getting a hearty meal.",
         technologies: ["JavaScript", "CSS", "HTML"],
         githubUrl: "https://github.com/aniatki/di-lucias-redesign",
-        imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
+        imageUrl: "assets/media/images/dil_1.png"
     },
-    // {
-    //     id: 3,
-    //     title: "AI Text to Video Generator",
-    //     description: "Add prompts and generate video using OpenAI's powerful API.",
-    //     technologies: ["Python", "OpenAI"],
-    //     githubUrl: "https://github.com/aniatki/openai-text-to-video",
-    //     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
-    // },
-    // {
-    //     id: 4,
-    //     title: "Using HTMX",
-    //     description: "Sample application demonstrating the power of Golang with HTMX for modern web development.",
-    //     technologies: ["Golang", "HTMX"],
-    //     githubUrl: "https://github.com/aniatki/go_htmx",
-    //     imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
-    // },
-    // {
-    //     id: 5,
-    //     title: "MayRemember",
-    //     description: "Server-side code for a small e-commerce app selling epoxy objects by order.",
-    //     technologies: ["Node.js", "Express.js", "EJS"],
-    //     githubUrl: "https://github.com/aniatki/may-remember",
-    //     imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
-    // },
     {
-        id: 6,
+        id: 3,
         title: "Lash by Belle",
         description: "A web-app used by a beauty salon to organize bookings and advertise their products.",
         technologies: ["Django", "Python", "JavaScript", "PostgreSQL", "CSS"],
         githubUrl: "https://github.com/aniatki/pro-dad",
-        imageUrl: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300"
+        imageUrl: "assets/media/images/lash_1.png"
     }
 ];
 
