@@ -1,13 +1,12 @@
 ---
 title: "Blog"
 layout: "base.njk"
-imageUrl: "https://helpdeskgeek.com/wp-content/pictures/2020/11/how-to-fix-a-clock-watchdog-timeout-bsod-windows-10-definition.png"
 ---
 <ul class="posts-list container">
 {%- for post in collections.posts -%}
   <li>
     <a href="{{ post.url }}">
-      <img src="{{ imageUrl }}" alt="BSOD Clock Watchdog Timeout">
+      <img src="{{ post.data.imageUrl }}" alt="BSOD Clock Watchdog Timeout">
       <h2>
         {{ post.data.title }}
       </h2>

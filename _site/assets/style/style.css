@@ -9,8 +9,8 @@
     --accent-light: hsl(48, 70%, 52%);
     --accent-dark: hsl(48, 70%, 32%);
     --background: hsl(0, 0%, 100%);
-    --surface: hsl(0, 0%, 90%);
-    --surface-light: hsl(0, 0%, 94%);
+    --surface: hsl(0, 0%, 96%);
+    --surface-light: hsl(0, 0%, 98%);
     --text-primary: hsl(0, 0%, 2%);
     --text-secondary: hsl(0, 0%, 30%);
     --text-muted: hsl(0, 0%, 40%);
@@ -707,7 +707,7 @@ body {
 
 .footer p {
     font-size: 0.8rem;
-    /* color: var(--text-muted); */
+    color: var(--text-muted);
     opacity: 0;
 }
 
@@ -740,9 +740,6 @@ body {
 
 .posts-list img {
     width: 100%;
-    height: 8rem;
-    object-fit: cover;
-    object-position: top;
     border-radius: .5rem;
 }
 
@@ -791,6 +788,51 @@ body {
     border-radius: .5rem;
 }
 
+code {
+    background-color: var(--surface);
+    color: var(--accent-dark);
+    padding: .125rem;
+    margin-inline-end: .25rem;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    min-width: min-content;
+    overflow-x: scroll;
+}
+
+tr { 
+    display: flex;
+    align-items: left;
+}
+
+tr>td:nth-child(1),
+tr>th:nth-child(1),
+tr>td:nth-child(2),
+tr>th:nth-child(2){
+    width: 25%
+}
+tr>td:nth-child(3),
+tr>th:nth-child(3){
+    width: 50%;
+}
+
+tr > * {
+    padding: .5rem;
+    outline: 1px solid rgba(0,0,0,.1); 
+}
+
+tr:nth-child(n+1) {
+    background: var(--surface);
+}
+tr:nth-child(n+2) {
+    background: var(--surface-light);
+}
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
